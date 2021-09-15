@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+</head>
+
+<style>
+    #canvas {
+        border: solid 1px red;
+    }
+
+    .two-buttons {
+        margin-top: 20;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            
+          </div>
+          <div class="col-sm">
+            <h1>Hello HVQ</h1>
+
+            <canvas id="canvas" width="280" height="280"></canvas>
+            <script type="text/javascript">
+                function onoff(){
+                  currentvalue = document.getElementById('erase-button').value;
+                  if(currentvalue == "Off"){
+                    document.getElementById("erase-button").value="On";
+                    document.getElementById("erase-button").style.backgroundColor = 'red'
+                  }else{
+                    document.getElementById("erase-button").value="Off"
+                    document.getElementById("erase-button").style.backgroundColor = 'black'
+                  }
+                }
+                </script>
+            <div class="two-buttons">
+                <button id="new-button" class="btn btn-primary">New</button>
+                <button id ="save-button" class="btn btn-warning">Save</button>
+                <button id="erase-button" class="btn btn-dark" onclick="onoff()" value="Off">Erase</button>
+            </div>
+            <img id = "canvas-image" width="280" height="280">
+          </div>
+          <div class="col-sm">
+            
+          </div>
+        </div>
+      </div>
+</body>
+
